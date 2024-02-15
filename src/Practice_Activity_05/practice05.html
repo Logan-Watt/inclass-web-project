@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="page with text-wrap and floats">
+    <title>Practice 05</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+        }          
+
+        *, ::after, ::before {
+            box-sizing: inherit;
+            text-align: left;
+        }
+
+        article, section {
+            padding: 0 15% 0 15%;
+        }
+
+        header .floatl {
+            float: left;
+            color: lightcoral
+        }
+        
+        header .floatl .strong {
+            font-weight: bold;
+            color: black;
+        }
+
+        header .floatr {
+            float: right;
+            color: lightcoral
+        }
+
+        .textwrap  p  img {
+            width: 35%;
+            padding: 5px;
+            float: left;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            text-align: left;
+        }
+
+        .circle {
+            float: left;
+            width: 250px;
+            height: 250px;
+            border-radius: 125px;
+            margin: .5rem;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    
+        .vcenter .circle {
+            line-height: 250px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .light1 {
+            width: 20%;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        .light2 {
+            width: 20%;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        .dark {
+            width: 60%;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        .col {
+            display: table;
+        }
+
+        .light1, .light2, .dark {
+            display: table-cell;
+        }
+
+        .equalcol h1 {
+            text-align: left;
+        }
+
+        .copyr {
+            float: right;
+        }
+
+        .equalcol {
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="floatl">
+                <span class="strong">Floated Menus:</span>
+                <span>One</span>
+                <span>Two</span>
+            </div>
+            <div class="floatr">
+                <span>Three</span>
+                <span>Four</span>
+            </div>
+            <br>
+            <hr>
+        </header>
+        <br>
+        <article>
+            <header>
+                <h1>Wrapping Text Around an Image</h1>
+                <h2>A secondary heading</h2>
+            </header>
+            <section class="textwrap">
+                <p>
+                    <img src="https://unsplash.com/photos/a-large-body-of-water-surrounded-by-mountains-rqKjlc8wM4A" alt="beach">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Necessitatibus veritatis adipisci voluptate eligendi eaque 
+                    saepe fuga ullam blanditiis nostrum! Ducimus aliquid fugiat 
+                    assumenda reiciendis dolor. Earum sed facilis asperiores 
+                    deleniti!
+                </p>
+            </section>
+        </article>
+        <br>
+        <section>
+            <header>
+                <h1>Centering Text Vertically</h1>
+            </header>
+            <div class="vcenter">
+                <div class="circle">Selectors</div>
+                <div class="circle">Inheritance</div>
+                <div class="circle">Cascade</div>
+                <div class="circle">Specificity</div>
+            </div>
+        </section>
+        <section class="equalcol clearfix">
+            <header>
+                <br>
+                <h1>Equal-Height Columns</h1>
+            </header>
+            <div class="col"></div>
+                <p class="light1">Lorem ipsum dolor sit amet, consectetur 
+                    adipisicing elit. Libero, quae explicabo repellat recusandae 
+                    cumque, quia suscipit obcaecati dicta iste unde, iusto 
+                    nostrum adipisci.</p>
+                <p class="dark">Lorem, ipsum dolor sit amet consectetur 
+                    adipisicing elit. Similique nihil consequatur dolorem id 
+                    quia ullam reiciendis mollitia iste, eligendi, aperiam 
+                    recusandae voluptatibus delectus commodi. Odio animi 
+                    corrupti reiciendis ullam laboriosam! Lorem, ipsum dolor 
+                    sit amet consectetur adipisicing elit. Similique nihil 
+                    consequatur dolorem id quia ullam reiciendis mollitia iste, 
+                    eligendi, aperiam recusandae voluptatibus delectus commodi. 
+                    Odio animi corrupti reiciendis ullam laboriosam!</p>
+                <p class="light2">Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. At dolorem assumenda, rerum doloremque 
+                    asperiores maiores blanditiis voluptatibus earum accusantium 
+                    mollitia architecto quidem quis, neque eius quaerat nobis 
+                    maxime magni beatae.</p>
+            </div>
+        </section>
+        <footer>
+            <hr>
+            <span class="name">Logan J. Watt</span>
+            <div class="copyr">&copy; All right reserved</div>
+        </footer>
+    </main>
+</body>
+</html>

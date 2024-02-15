@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="a newsletter page">
+    <title>Newsletter Page</title>
+    <style>
+        main {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        header {
+            padding: 10px;
+            color: maroon;
+        }
+
+        header > .top > span:nth-child(2) {
+            float: right;
+        }
+
+        header > h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: center;
+            border-top: 2px solid maroon;
+            padding-top: 1rem;
+            margin: 10px 0 5px 0;
+        }
+
+        header > h1 > .subtitle {
+            display: block;
+            font-size: 1.5rem;
+            border-top: 1px solid maroon;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .toph img {
+            width: 100%;
+
+        }
+
+        /* cards */
+        .cards {
+            text-align: center;
+        }
+
+        .cards > div {
+            display: inline-block;
+            width: 30%;
+            background-color: gray;
+            margin: 10px;
+            padding: 10px;
+            vertical-align: top;
+            height: 250px;
+        }
+
+        .cards > div > ul, .cards > div > p {
+            text-align: left;
+        }
+
+        .cards > div > h1 {
+            background-color: white;
+            border: 1px solid white;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            line-height: 60px;
+            display: inline-block;
+        }
+
+        blockquote {
+            font-size: 2rem;
+            color: maroon;
+            text-align: center;
+        }
+
+        blockquote::before, blockquote::after {
+            content: '"';
+            font-size: 2rem;
+            color: grey;
+        }
+
+        table {
+            width: 98%;
+            margin: 10px;
+            border-collapse: collapse;
+        }
+
+        table > head {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: rosybrown;
+        }
+
+        thead  th, tbody  td {
+            padding: 10px 0;
+
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: grey;
+        }
+
+        .highlighted {
+            background-color: seagreen;
+            margin: 10px;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .highlighted img {
+            float: right;
+            border: 2px dashed green;
+            margin: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="top">
+                <span>Lorem ipsum</span>
+                <span>February 2, 2024</span>
+            </div>
+            <h1>
+                A Newsletter
+                <span class="subtitle">Lorem ipsum dolor sit, amet 
+                consectetur adipisicing elit.</span>
+        </header>
+        <section class="toph">
+            <img src="https://via.placeholder.com/900x200.png"
+            alt="description">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Nisi enim error quis velit blanditiis veritatis architecto 
+                impedit, corrupti minima! Fuga temporibus dicta vel totam 
+                nulla atque, autem reiciendis deserunt sequi?
+            </p>
+            <ol>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ol>
+        </section>
+        <section class="cards">
+            <div class="card">
+                <h1>1</h1>
+                <h2>bla</h2>
+                <ul>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h1>2</h1>
+                <h2>bla bla</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum 
+                atque voluptatibus dolor accusamus, amet ipsa vero nihil culpa dolorem 
+                voluptates natus facere repellat</p>
+            </div>
+            <div class="card">
+                <h1>3</h1>
+                <h2>bla bla bla</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Consequuntur deserunt suscipit saepe eius eveniet neque quasi hic a ad 
+                corporis deleniti quis dolor quisquam perspiciatis, eaque nulla 
+                quibusdam ducimus ut!</p>
+            </div>
+        </section>
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque 
+        delectus molestiae quam qui officiis nam, sint a animi neque iusto amet 
+        aperiam sequi architecto?</blockquote>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lorem</th>
+                    <th>Ispom</th>
+                    <th>Solor</th>
+                    <th>Emet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>lorem</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>ipsom</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>solor</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>emet</td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="highlighted">
+            <img src="https://via.placeholder.com/350x200.png" alt="Photo">
+            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit 
+            et tempora, impedit velit a vero atque sed laboriosam non doloribus 
+            corrupti facilis, natus autem praesentium repellat omnis fuga, 
+            provident perspiciatis.</p>
+        </section>
+    </main>
+</body>
+</html>
