@@ -3,7 +3,7 @@
 @import url("bootstrap-icons/font/bootstrap-icons.css");
 
 body {
-    width: 80%;
+    width: 40%;
     margin: 0 auto 1rem;
     text-align: center;
 }
@@ -49,6 +49,5 @@ div {
     display: flex;
     flex-flow: row nowrap;
 }
-
 
 
