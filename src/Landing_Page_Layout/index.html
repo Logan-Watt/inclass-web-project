@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="landing page">
+    <title>Landing Page Layout</title>
+    <style>
+        /* All styling for HTML Page */
+        :root {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }          
+
+        *, ::after, ::before {
+            box-sizing: inherit;
+            overflow: hidden;
+        }
+
+        header .floatl, header .floatr {
+            padding: 5px;
+            background-color: white;
+            color: orange;
+        }
+
+        .floatl {
+            float: left;
+        }
+
+        .begin {
+            color: grey;
+        }
+        
+        .floatr {
+            float: right;
+        }
+
+        .bold {
+            color: black;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <!-- first 5 span left, Account and Login floated right -->
+            <div class="floatl">
+                <span class="begin">Utah Mighty <b class="bold">FIVE</b></span>
+                <span>One</span>
+                <span>Two</span>
+                <span>Three</span>
+                <span>Four</span>
+                <span>Five</span>
+            </div>
+            <div class="floatr">
+                <span>Account</span>
+                <span class="current">Login</span>
+            </div>
+        </header>
+        <hr>
+        <article>
+            <section class="textwrap">
+                <!-- H1, p, buttons on left -->
+                <h1>Close Your Eyes and Open Your Mind</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Tenetur temporibus facilis saepe eius provident, expedita 
+                    tempore quos esse at quae a aspernatur obcaecati nisi 
+                    illo necessitatibus illum. Unde, dolorum a.</p>
+                <div class="button">
+                    <span>Take a Tour</span>
+                    <span>Start a Free Trial</span>
+                </div>
+                <div class="youtube-embed">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OCzzN8VZgfY?si=mTFSPa52xvTAZTN-" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h1>What are they?</h1>
+            </header>
+            <section>
+                <!-- Horizontal align columns with images and p -->
+            </section>
+        </article>
+        <article>
+            <!-- 4 column 5 row table, bolded 1st row -->
+        </article>
+        <footer>
+            <!-- Legal, Partner, Explore left, All rights reserved floated right -->
+        </footer>
+    </main>
+</body>
+</html>
