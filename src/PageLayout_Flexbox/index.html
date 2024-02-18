@@ -9,11 +9,25 @@
 
     <style>
         body {
-            width: 40%;
+            width: 75%;
             margin: 0 auto 1rem;
-            text-align: center;
+            text-align: left;
         }
-        
+
+        .header {
+            text-align: left;
+        }
+
+        .menu {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .menu  > span {
+            color: darkgoldenrod;
+            padding: 2rem;
+        }
+
         .gallery {
             display: flex;
             border: 1px transparent lightgray;
@@ -22,9 +36,9 @@
             flex-flow: column nowrap;
         }
         
-        .gallery > .top {
+        .gallery {
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
         }
         
         .image {
@@ -32,29 +46,46 @@
         }
         
         img {
-            width: 50%;
-            height: 50%;
+            width: 35%;
+            height: 35%;
             border-radius: .5rem;
         }
-        
+
+        .image1 > h1 {
+            color: gray;
+        }
+
+        .image2 > h1 {
+            color: gray;
+        }
+
+        .image3 {
+            border-radius: 1rem;
+        }
+
+        .image3 > h1 {
+            color: gray;
+        }
+
         div {
             flex: 1;
         }
 
         .left, .right {
             display: flex;
-            flex-flow: column nowrap;
+            flex-flow: column wrap;
         }
 
         .right, .left {
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
         }
 
         .footer {
             background-color: grey;
             overflow: hidden;
             padding: 1rem;
+            color: white;
         }
 
         .footer > .socials {
@@ -80,13 +111,39 @@
         <span>Contact Us</span>
         <span>About Us</span>
     </div>
+    <br>
     <div class="gallery">
         <div class="left">
-            <div class="image"><img src="../images/cave.jpg" alt="Exploring a Cave"></div>
-            <div class="image"><img src="../images/cliff.jpg" alt="Cliff by Beach"></div>
+            <div class="image1">
+                <h1>Exploring Cave</h1>
+                <img src="../images/cave.jpg" alt="Exploring a Cave">
+                <h2>By Adam Smith, Jan 1 2021</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Aliquid consequuntur eos autem. A, officiis, quo qui fugit 
+                    non earum ratione cupiditate ex voluptas sequi obcaecati 
+                    laboriosam. Quam quia magnam dolore.</p>
+            </div>
+            <div class="image2">
+                <h1>Cliff by Beach</h1>
+                <img src="../images/cliff.jpg" alt="Cliff by Beach">
+                <h2>By John Doe, Jan 2 2021</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Recusandae repudiandae, nemo aspernatur iusto exercitationem 
+                    maxime. Pariatur ipsam soluta laboriosam. Veniam magnam 
+                    rem maiores quisquam officiis, repellat ratione vitae tenetur 
+                    explicabo!</p>
+            </div>
         </div>
+        <br>
         <div class="right">
-            <div class="image"><img src="../images/cliff.jpg" alt="Cliff by Beach"></div>
+            <div class="image3">
+                <h1>Secondary Info</h1>
+                <img src="../images/cliff.jpg" alt="Cliff by Beach">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Perspiciatis, nemo velit, dolores dolor error deleniti 
+                    rerum eligendi praesentium in sint labore amet corrupti 
+                    mollitia dignissimos reiciendis culpa a totam corporis!</p>
+            </div>
         </div>
     </div>
 
