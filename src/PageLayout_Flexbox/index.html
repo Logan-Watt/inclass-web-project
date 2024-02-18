@@ -8,6 +8,15 @@
     <title>Flexbox Page Layout</title>
 
     <style>
+
+        @media only screen and (max-width: 600px) {
+            
+            .desktop {
+                display: none
+            }
+
+        }
+
         body {
             width: 75%;
             margin: 0 auto 1rem;
@@ -51,19 +60,19 @@
             border-radius: .5rem;
         }
 
-        .image1 > h1 {
+        .sec1 > h1 {
             color: gray;
         }
 
-        .image2 > h1 {
+        .sec2 > h1 {
             color: gray;
         }
 
-        .image3 {
+        .sec3 {
             border-radius: 1rem;
         }
 
-        .image3 > h1 {
+        .sec3 > h1 {
             color: gray;
         }
 
@@ -114,7 +123,7 @@
     <br>
     <div class="gallery">
         <div class="left">
-            <div class="image1">
+            <div class="sec1">
                 <h1>Exploring Cave</h1>
                 <img src="../images/cave.jpg" alt="Exploring a Cave">
                 <h2>By Adam Smith, Jan 1 2021</h2>
@@ -123,7 +132,7 @@
                     non earum ratione cupiditate ex voluptas sequi obcaecati 
                     laboriosam. Quam quia magnam dolore.</p>
             </div>
-            <div class="image2">
+            <div class="sec2">
                 <h1>Cliff by Beach</h1>
                 <img src="../images/cliff.jpg" alt="Cliff by Beach">
                 <h2>By John Doe, Jan 2 2021</h2>
@@ -135,8 +144,8 @@
             </div>
         </div>
         <br>
-        <div class="right">
-            <div class="image3">
+        <div class="right desktop">
+            <div class="sec3">
                 <h1>Secondary Info</h1>
                 <img src="../images/cliff.jpg" alt="Cliff by Beach">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
