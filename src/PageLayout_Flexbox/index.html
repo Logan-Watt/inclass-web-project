@@ -18,7 +18,7 @@
         }
 
         body {
-            width: 75%;
+            width: 60%;
             margin: 0 auto 1rem;
             text-align: left;
         }
@@ -50,14 +50,11 @@
             flex-flow: row wrap;
         }
         
-        .image {
-            margin: 5px;
-        }
-        
         img {
             width: 35%;
             height: 35%;
-            border-radius: .5rem;
+            border-radius: 2rem;
+            padding: 5px;
         }
 
         .sec1 > h1 {
@@ -82,12 +79,37 @@
 
         .left, .right {
             display: flex;
-            flex-flow: column wrap;
+            flex-flow: column nowrap;
         }
 
-        .right, .left {
-            display: flex;
-            flex-flow: row wrap;
+        .left {
+            flex: 3;
+        }
+
+        .right {
+            flex: 1;
+        }
+
+        .sec1 > img {
+            float: left;
+        }
+
+        .sec1 > .img1 {
+            height: 60%;
+            width: 30%;
+        }
+
+        .sec1 {
+            border-bottom: 1px solid lightgrey;
+        }
+
+        .sec2 > img {
+            width: 100%;
+        }
+
+        .sec1 > .img2 {
+            height: 40%;
+            width: 30%;
         }
 
         .footer {
@@ -120,21 +142,20 @@
         <span>Contact Us</span>
         <span>About Us</span>
     </div>
-    <br>
     <div class="gallery">
         <div class="left">
             <div class="sec1">
+                <img class="img1" src="../images/cave.jpg" alt="Exploring a Cave">
                 <h1>Exploring Cave</h1>
-                <img src="../images/cave.jpg" alt="Exploring a Cave">
                 <h2>By Adam Smith, Jan 1 2021</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                     Aliquid consequuntur eos autem. A, officiis, quo qui fugit 
                     non earum ratione cupiditate ex voluptas sequi obcaecati 
                     laboriosam. Quam quia magnam dolore.</p>
             </div>
-            <div class="sec2">
+            <div class="sec1">
+                <img class="img2" src="../images/cliff.jpg" alt="Cliff by Beach">
                 <h1>Cliff by Beach</h1>
-                <img src="../images/cliff.jpg" alt="Cliff by Beach">
                 <h2>By John Doe, Jan 2 2021</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                     Recusandae repudiandae, nemo aspernatur iusto exercitationem 
@@ -143,9 +164,8 @@
                     explicabo!</p>
             </div>
         </div>
-        <br>
         <div class="right desktop">
-            <div class="sec3">
+            <div class="sec2">
                 <h1>Secondary Info</h1>
                 <img src="../images/cliff.jpg" alt="Cliff by Beach">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
