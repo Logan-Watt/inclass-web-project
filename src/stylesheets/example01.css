@@ -1,0 +1,57 @@
+/* TODO */
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+header {
+    font-size: 2rem;
+    padding: 0 1rem;
+    height: 100px;
+    line-height: 100px;
+    background-color: darkgray;
+}
+
+footer {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background-color: lightgray;
+}
+
+body {
+    margin: 0 0 0 0;
+}
+
+#main-container {
+    display: table;
+    width: 100vw;
+    height: calc(100vh - 160px);
+}
+
+#aside-col {
+    display: none;
+}
+
+#main-col {
+    display: table-cell;
+    background-color: yellowgreen;
+}
+
+#main-col .box {
+    height: 100px;
+    line-height: 100px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    margin: 1rem 1rem 0 1rem;
+}
+
