@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" description="index,follow">
+        <title>Simple Form</title>
+
+        <style>
+        /* Default CSS for Page */
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        *, ::after, ::before {
+            box-sizing: inherit;
+        }
+
+        /* CSS for Top Div */
+        .top {
+
+        }
+
+        header {
+            font-size: 1rem;
+            padding: .5rem;
+        }
+
+        footer {
+            font-size: .75rem;
+            padding: 0 1rem;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            background-color: black;
+            color: lightgray;
+        }
+
+        header span {
+            color: blue;
+            padding: .5rem;
+        }
+        
+        header #name {
+            font-weight: bold;
+            color: black;
+        }
+
+        header #currentpage {
+            border-bottom: 3px solid blue;
+        }
+
+        header .sign {
+            padding: .5rem;
+            float: right;
+        }
+
+        /* CSS for Creation of Flexbox */
+        .use-flex #main-container {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100vw;
+        }
+
+        /* CSS for Flexbox Left */
+        .use-flex #left-col {
+
+        }
+
+        .mainmenu {
+
+        }
+
+        .mainmenu h1 {
+
+        }
+
+        .featured {
+
+        }
+
+        .featured h1 {
+
+        }
+
+        .item {
+
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        /* CSS for Flexbox Right */
+        .use-flex #main-col {
+            flex: 1;
+        }
+
+        .formtop {
+
+        }
+
+        .form {
+
+        }
+
+        .form #username {
+
+        }
+
+        .form #member {
+
+        }
+
+        .form #email {
+
+        }
+
+        .form #textbox {
+
+        }
+
+        .formend {
+
+        }
+
+        .boxtick {
+
+        }
+
+        .boxtick #highlight {
+
+        }
+
+        .button {
+
+        }
+
+        /* CSS for Bottom Div */
+        .bottom {
+
+        }
+
+        .bottom #copyright {
+
+        }
+
+    </style>
+    </head>
+
+    <body class="use-flex">
+        <div class="top">
+            <header>
+                <span id="name">Logan Watt</span>
+                <span>Home</span>
+                <span>Products</span>
+                <span>Services</span>
+                <span id="currentpage">Contact Us</span>
+                <span class="sign">Sign In</span>
+                <span class="sign">Sign Up</span>
+            </header>
+        </div>
+        <hr>
+        <div class="use-flex" id="main-container">
+            <div id="left-col">
+                <div class="main-menu clearfix">
+                    <h1>Main Menu</h1>
+                    <span class="item">Home</span>
+                    <span class="item">Products</span>
+                    <span class="item">Services</span>
+                    <span class="item">About Us</span>
+                </div>
+                <div class="featured clearfix">
+                    <h1>Featured Projects</h1>
+                    <span class="item">Project A</span>
+                    <span class="item">Project B</span>
+                    <span class="item">Project C</span>
+                    <span class="item">Project D</span>
+                    <span class="item">Project F</span>
+                    <span class="item">Project G</span>
+                </div>
+            </div>
+            <div id="main-col">
+                <div class="form-top">
+                    <h1>Contact Us Form</h1>
+                </div>
+                <div class="form clearfix">
+                    <h1>Name</h1>
+                    <h1 id="username">Username</h1>
+                    <h1 id="member">Are you a member?</h1>
+                    <h1 id="email">Email</h1>
+                    <h1 id="textbox">Message</h1>
+                </div>
+                <div class="form-end clearfix">
+                    <span class="box-tick">I agree to the <mark
+                            id="highlight">terms and conditions</mark></span>
+                    <span class="button">Submit</span>
+                    <span class="button">Cancel</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <footer>
+                <span id="copyright">&copy; 2024 - CS 2350 - All rights
+                    reserved</span>
+            </footer>
+        </div>
+    </body>
+
+</html>
