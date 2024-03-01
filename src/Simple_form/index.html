@@ -4,7 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" description="index,follow">
+        <meta name="robots" content="index,follow">
+        <meta name="description" content="A simple form web page">
         <title>Simple Form</title>
 
         <style>
@@ -41,7 +42,7 @@
             padding: .5rem;
         }
         
-        header #name {
+        header #first-name {
             font-weight: bold;
             color: black;
         }
@@ -154,7 +155,7 @@
     <body class="use-flex">
         <div class="top">
             <header>
-                <span id="name">Logan Watt</span>
+                <span id="first-name">Logan Watt</span>
                 <span>Home</span>
                 <span>Products</span>
                 <span>Services</span>
@@ -192,19 +193,19 @@
                     <h1>Contact Us Form</h1>
                 </div>
                 <div class="form clearfix">
-                    <h1 id="name">Name</h1>
+                    <h1 class="name">Name</h1>
                     <input type="text" id="name" placeholder="Type name here">
-                    <h1 id="username">Username</h1>
+                    <h1 class="username">Username</h1>
                     <input type="text" id="username" placeholder="Text input">
                     <h1 id="member">Are you a member?</h1>
                     <div class="box-tick">
                         <span><input type="checkbox">Yes</span>
                         <span><input type="checkbox">No</span>
                     </div>
-                    <h1 id="email">Email</h1>
+                    <h1 class="email">Email</h1>
                     <input type="text" id="email" placeholder="Text input">
                     <h1 class="textbox">Message</h1>
-                    <textarea type="text" id="textbox"
+                    <textarea id="textbox"
                         placeholder="Textarea"></textarea>
                 </div>
                 <div class="form-end clearfix">
@@ -213,7 +214,7 @@
                             id="highlight">terms and conditions</mark></span>
                             <br>
                     <button type="submit" id="submit">Submit</button>
-                    <button type="cancel" id="cancel">Cancel</button>
+                    <button type="submit" id="cancel">Cancel</button>
                 </div>
             </div>
         </div>
