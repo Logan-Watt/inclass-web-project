@@ -8,7 +8,6 @@
         <title>Simple Form</title>
 
         <style>
-        /* Default CSS for Page */
         :root {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
@@ -17,16 +16,14 @@
         
         *, ::after, ::before {
             box-sizing: inherit;
-        }
-
-        /* CSS for Top Div */
-        .top {
-
+            overflow: hidden;
         }
 
         header {
             font-size: 1rem;
             padding: .5rem;
+            height: 60px;
+            line-height: 60px;
         }
 
         footer {
@@ -54,40 +51,14 @@
         }
 
         header .sign {
-            padding: .5rem;
             float: right;
         }
 
-        /* CSS for Creation of Flexbox */
         .use-flex #main-container {
             display: flex;
             flex-flow: row nowrap;
             width: 100vw;
-        }
-
-        /* CSS for Flexbox Left */
-        .use-flex #left-col {
-
-        }
-
-        .mainmenu {
-
-        }
-
-        .mainmenu h1 {
-
-        }
-
-        .featured {
-
-        }
-
-        .featured h1 {
-
-        }
-
-        .item {
-
+            justify-content: center;
         }
 
         .clearfix::after {
@@ -96,58 +67,85 @@
             display: table;
         }
         
-        /* CSS for Flexbox Right */
         .use-flex #main-col {
-            flex: 1;
+            flex: .4;
+            padding: 1rem;
+            margin: 1rem;
+            border: 1px solid lightgray;
+            border-radius: 50px;
         }
 
-        .formtop {
-
+        #left-col {
+            flex: .2;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 50px;
+            border: 1px solid lightgray;
+            width: 25%;
         }
 
-        .form {
-
+        #main-container {
+            height: calc(100vh - 120px);
         }
 
-        .form #username {
-
+        body {
+            margin: 0;
         }
 
-        .form #member {
-
+        #left-col h1 {
+            font-size: 1.3rem;
         }
 
-        .form #email {
-
+        #left-col .item {
+            color: blue;
+            padding-bottom: .5rem;
         }
 
-        .form #textbox {
-
+        #main-col .form-top h1 {
+            font-size: 2rem;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid blue;
         }
 
-        .formend {
-
+        #main-col .form {
+            font-size: .5rem;
+            font-weight: bold;
         }
 
-        .boxtick {
-
+        .form .box-tick {
+            font-size: .8rem;
+            color: gray;
+            padding: .5rem;
         }
 
-        .boxtick #highlight {
-
+        .form .box-tick span {
+            padding: .5rem;
         }
 
-        .button {
-
+        .form textarea {
+            width: 100%;
+            height: 150px;
         }
 
-        /* CSS for Bottom Div */
-        .bottom {
-
+        .form-end mark {
+            color: blue;
+            background-color: white;
         }
 
-        .bottom #copyright {
+        .form-end #submit {
+            background-color: blue;
+            border-radius: 10px;
+            color: white;
+            width: 60px;
+            height: 30px;
+        }
 
+        .form-end #cancel {
+            border-radius: 10px;
+            color: blue;
+            width: 60px;
+            height: 30px;
+            background-color: white;
         }
 
     </style>
@@ -170,19 +168,23 @@
             <div id="left-col">
                 <div class="main-menu clearfix">
                     <h1>Main Menu</h1>
-                    <span class="item">Home</span>
-                    <span class="item">Products</span>
-                    <span class="item">Services</span>
-                    <span class="item">About Us</span>
+                    <ul>
+                        <li class="item">Home</li>
+                        <li class="item">Products</li>
+                        <li class="item">Services</li>
+                        <li class="item">About Us</li>
+                    </ul>
                 </div>
                 <div class="featured clearfix">
                     <h1>Featured Projects</h1>
-                    <span class="item">Project A</span>
-                    <span class="item">Project B</span>
-                    <span class="item">Project C</span>
-                    <span class="item">Project D</span>
-                    <span class="item">Project F</span>
-                    <span class="item">Project G</span>
+                    <ul>
+                        <li class="item">Project A</li>
+                        <li class="item">Project B</li>
+                        <li class="item">Project C</li>
+                        <li class="item">Project D</li>
+                        <li class="item">Project F</li>
+                        <li class="item">Project G</li>
+                    </ul>
                 </div>
             </div>
             <div id="main-col">
@@ -190,17 +192,28 @@
                     <h1>Contact Us Form</h1>
                 </div>
                 <div class="form clearfix">
-                    <h1>Name</h1>
+                    <h1 id="name">Name</h1>
+                    <input type="text" id="name" placeholder="Type name here">
                     <h1 id="username">Username</h1>
+                    <input type="text" id="username" placeholder="Text input">
                     <h1 id="member">Are you a member?</h1>
+                    <div class="box-tick">
+                        <span><input type="checkbox">Yes</span>
+                        <span><input type="checkbox">No</span>
+                    </div>
                     <h1 id="email">Email</h1>
-                    <h1 id="textbox">Message</h1>
+                    <input type="text" id="email" placeholder="Text input">
+                    <h1 class="textbox">Message</h1>
+                    <textarea type="text" id="textbox"
+                        placeholder="Textarea"></textarea>
                 </div>
                 <div class="form-end clearfix">
-                    <span class="box-tick">I agree to the <mark
+                    <span class="box-tick"><input type="checkbox">I agree to the
+                        <mark
                             id="highlight">terms and conditions</mark></span>
-                    <span class="button">Submit</span>
-                    <span class="button">Cancel</span>
+                            <br>
+                    <button type="submit" id="submit">Submit</button>
+                    <button type="cancel" id="cancel">Cancel</button>
                 </div>
             </div>
         </div>
