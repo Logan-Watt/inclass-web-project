@@ -1,42 +1,21 @@
 //TODO - Your ES6 JavaScript code (if any) goes here
 import "bootstrap"
 
-// functions in java
-const displayRandomBox = function(){
-    let r = Math.random()
-    if(r < .5) {
-        document.write('<div class="red box"></div>')
-    }else {
-        document.write('<div class="blue box"></div>')
+function getMax(x,y,z){
+
+    prompt("What is the value for x?")
+    prompt("What is the value for y?")
+    prompt("What is the value for z?")
+
+    if (x > y && x > z) {
+        let max = x
     }
-}
-
-function displayNBoxesUsingFor(n){
-    for(let i = 0; i < n; i++) {
-        displayRandomBox()
+    else if (y > x && y > z) {
+        let max = y
     }
-}
-
-function displayNBoxesUsingWhile(n){
-    let j = 0
-    while(j < n){
-        displayRandomBox()
-        j++
+    else if (z > x && z > y) {
+        let max = z
     }
-}
-
-function displayNBoxesUsingDoWhile(n){
-    let k = 0
-    do{
-        displayRandomBox()
-        k++
-    }while(k < n)
-}
-
-displayNBoxesUsingFor(15)
-displayNBoxesUsingWhile(12)
-displayNBoxesUsingDoWhile(10)
-
-const square = function(x){
-    return x * x
+    
+return max;
 }
