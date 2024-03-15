@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Multiplication Table</title>
+	</head>
+	<body>
+		<script>
+			document.write("<h1>12 by 12 Multiplication Table</h1>")
+			let num = 12;
+			document.write("<table border='3px'>")
+			for(let i = 1; i <= num; i++) {
+				document.write("<tr style='height:35px;'>");
+				for(let j = 1; j <= num; j++) {
+					document.write("<td style='width:35px;background-color: white;'>" + i*j + "</td>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		</script>
+	</body>
+</html>
