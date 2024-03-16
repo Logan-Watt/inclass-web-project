@@ -95,7 +95,7 @@ function arrow(size) {
             if (str.length == size) {
                 for (let i = 0; i < size; i++) {
                       str = str.replace("*", "");
-                      console.log(str) 
+                      console.log(str);
                 }
             }
         }
