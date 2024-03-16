@@ -2,84 +2,105 @@
 import "bootstrap"
 // xyz functions
 function getMax(x, y, z){
+    let max = 0;
     if (x > y && x > z) {
-        let max = x
+        max = x;
     }
     else if (y > x && y > z) {
-        let max = y
+        max = y;
     }
     else if (z > x && z > y) {
-        let max = z
+        max = z;
     }
-
+    
     return max;
 }
+console.log(getMax(4, 5, 6))
 
 function getMin(x, y, z) {
+    let min = 0;
     if (x < y && x < z) {
-        let min = x
+        min = x;
     }
     else if (y < x && y < z) {
-        let min = y
+        min = y;
     }
     else if (z < x && z < y) {
-        let min = z
+        min = z;
     }
 
     return min;
 }
+console.log(getMin(4, 5, 6));
 
 function getMean(x, y, z) {
-    let mean = (x + y + z) / 3
+    let mean = (x + y + z) / 3;
 
     return mean;
 }
+console.log(getMean(4, 5, 6));
 
 function compare(word1, word2) {
     if (word1 == word2) {
         return 0;
     }
-    else if (word1 > word2) {
+    else if (word1.length > word2.length) {
         return 1;
     }
-    else if (word1 < word2) {
+    else if (word1.length < word2.length) {
         return -1;
     }
 }
+console.log(compare("hello", "hola"));
 
 function getCharPerLine(str, indent) {
-    // output for indent = false is good, except outputs "undefined"
-    // output for indent = true needs to be fixed, no indent visible
+    // output for 'indent = false' is good
+    // output for 'indent = true' needs to be fixed, no indent visible
 
-    if (indent == 'true') {
+    if (indent == true) {
         for (let i = 0; i < str.length; i++) {
             if (str[i] == ' ') {
-                continue
+                continue;
             }
             else {
-                for (let k = 0; k != i; k++) {
-                    console.log(' ')
+                let char = "";
+                for (let k = 0; k < i; k++) {
+                    char += " ";
                 }
-                console.log(str[i])
+                console.log(char + str[i]);
             }
         }
     }
     else {
         for (let j = 0; j < str.length; j++) {
             if (str[j] == ' ') {
-                continue
+                continue;
             }
             else {
-                console.log(str[j])
+                console.log(str[j]);
             }
         }
     }
 }
+getCharPerLine("Hello World!", false)
+getCharPerLine("Hello World!", true)
 
-console.log(getCharPerLine("Hello World!", false))
-
-console.log(getCharPerLine("Hello World!", true))
 function arrow(size) {
-    // Yet to code
-
+    let count = 0;
+    while (count == 0) {
+        let str = "";
+        for (let j = 0; j < size; j++) {
+            str += "*";
+            console.log(str);
+            if (str.length == size) {
+                for (let i = 0; i < size; i++) {
+                      str = str.replace("*", "");
+                      console.log(str) 
+                }
+            }
+        }
+        count += 1;
+    }
 }
+
+console.log(arrow(3));
